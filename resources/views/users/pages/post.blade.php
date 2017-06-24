@@ -17,7 +17,7 @@
         <div class="container">
             <div class="imageService" style="background-image: url({{asset('/storage/news/'.$data->image)}});"></div>
             <div class="row" style="padding: 30px 40px; color: #fff;">
-                {!!$data->description . '.'!!}
+                {!!$data->description!!}
             </div>
         </div>
     </section>
