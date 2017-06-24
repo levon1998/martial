@@ -1,0 +1,44 @@
+[27-May-2017 21:49:31 UTC] PHP Warning:  require(/home/martiala/test.martialarts.am/public/../public_test/bootstrap/autoload.php): failed to open stream: No such file or directory in /home/martiala/test.martialarts.am/public/index.php on line 22
+[27-May-2017 21:49:31 UTC] PHP Fatal error:  require(): Failed opening required '/home/martiala/test.martialarts.am/public/../public_test/bootstrap/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/martiala/test.martialarts.am/public/index.php on line 22
+[27-May-2017 21:50:24 UTC] PHP Warning:  include(/home/martiala/public_test/vendor/composer/../../app/Http/Kernel.php): failed to open stream: No such file or directory in /home/martiala/public_test/vendor/composer/ClassLoader.php on line 414
+[27-May-2017 21:50:24 UTC] PHP Warning:  include(): Failed opening '/home/martiala/public_test/vendor/composer/../../app/Http/Kernel.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/martiala/public_test/vendor/composer/ClassLoader.php on line 414
+[27-May-2017 21:50:24 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class App\Http\Kernel does not exist' in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php:749
+Stack trace:
+#0 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(749): ReflectionClass->__construct('App\\Http\\Kernel')
+#1 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('App\\Http\\Kernel', Array)
+#2 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('App\\Http\\Kernel', Array)
+#3 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(231): Illuminate\Foundation\Application->make('App\\Http\\Kernel', Array)
+#4 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(746): Illuminate\Container\Container->Illuminate\Container\{closure}(Objec in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 749
+[30-May-2017 19:32:37 UTC] PHP Warning:  include(/home/martiala/public_test/vendor/composer/../../app/Http/Kernel.php): failed to open stream: No such file or directory in /home/martiala/public_test/vendor/composer/ClassLoader.php on line 414
+[30-May-2017 19:32:37 UTC] PHP Warning:  include(): Failed opening '/home/martiala/public_test/vendor/composer/../../app/Http/Kernel.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/martiala/public_test/vendor/composer/ClassLoader.php on line 414
+[30-May-2017 19:32:37 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class App\Http\Kernel does not exist' in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php:749
+Stack trace:
+#0 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(749): ReflectionClass->__construct('App\\Http\\Kernel')
+#1 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('App\\Http\\Kernel', Array)
+#2 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('App\\Http\\Kernel', Array)
+#3 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(231): Illuminate\Foundation\Application->make('App\\Http\\Kernel', Array)
+#4 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(746): Illuminate\Container\Container->Illuminate\Container\{closure}(Objec in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 749
+[30-May-2017 19:35:42 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class App\Http\Kernel does not exist' in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php:749
+Stack trace:
+#0 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(749): ReflectionClass->__construct('App\\Http\\Kernel')
+#1 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('App\\Http\\Kernel', Array)
+#2 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('App\\Http\\Kernel', Array)
+#3 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(231): Illuminate\Foundation\Application->make('App\\Http\\Kernel', Array)
+#4 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(746): Illuminate\Container\Container->Illuminate\Container\{closure}(Objec in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 749
+[30-May-2017 19:40:59 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class App\Http\Kernel does not exist' in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php:749
+Stack trace:
+#0 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(749): ReflectionClass->__construct('App\\Http\\Kernel')
+#1 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('App\\Http\\Kernel', Array)
+#2 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('App\\Http\\Kernel', Array)
+#3 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(231): Illuminate\Foundation\Application->make('App\\Http\\Kernel', Array)
+#4 /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php(746): Illuminate\Container\Container->Illuminate\Container\{closure}(Objec in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 749
+[30-May-2017 19:42:53 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:42:56 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:42:57 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:42:58 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:42:58 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:42:58 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:42:59 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:43:00 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:43:14 UTC] PHP Fatal error:  Class 'Cartalyst\Sentinel\Laravel\SentinelServiceProvider' not found in /home/martiala/public_test/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php on line 146
+[30-May-2017 19:44:19 UTC] PHP Fatal error:  Trait 'Cartalyst\Support\Traits\RepositoryTrait' not found in /home/martiala/public_test/vendor/cartalyst/sentinel/src/Activations/IlluminateActivationRepository.php on line 29

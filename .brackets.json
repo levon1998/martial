@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/xampp/htdocs/martial/gulpfile.js",
+        "D:/xampp/htdocs/martial/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/respond.min.js"
+    ]
+}
