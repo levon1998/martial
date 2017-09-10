@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Martial arts admin panel <small>v1</small></a>
+        <a class="navbar-brand" href="{{url('/')}}">Martial arts admin panel <small>v1</small></a>
     </div>
     <!-- /.navbar-header -->
 
@@ -18,7 +18,7 @@
             </a>
             <ul class="dropdown-menu dropdown-user">
                 <li>
-                    <a href="{{url(env('url') . 'logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    <a href="{{url(env('url') . 'logout')}}"><i class="fa fa-sign-out fa-fw"></i> Ելք</a>
                 </li>
             </ul>
             <!-- /.dropdown-user -->
@@ -31,63 +31,74 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
-                    <a href="{{url(env('url'))}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard </a>
+                    <a href="{{url(env('url'))}}"><i class="fa fa-dashboard fa-fw"></i> Ստատիստիկա </a>
                 </li>
                 <li>
-                    <a href="{{url(env('url').'home-texts')}}"><i class="fa fa-bar-chart-o fa-fw"></i> Home text </a>
+                    <a href="{{url(env('url').'home-texts')}}"><i class="fa fa-sitemap fa-fw"></i> Սլայդեր </a>
                 </li>
                 <li>
-                    <a href="{{url(env('url').'about-texts')}}"><i class="fa fa-table fa-fw"></i> About text </a>
+                    <a href="{{url(env('url').'about-texts')}}"><i class="fa fa-sitemap fa-fw"></i> Մեր Մասին </a>
                 </li>
                 <li>
-                    <a><i class="fa fa-edit fa-fw"></i> Services <span class="fa arrow"></span></a>
+                    <a><i class="fa fa-sitemap fa-fw"></i> Ծառայություներ <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{{url(env('url').'add-services')}}">Add Service</a>
+                            <a href="{{url(env('url').'add-services')}}">Ավելացնել</a>
                         </li>
                         <li>
-                            <a href="{{url(env('url').'all-services')}}">All Services</a>
+                            <a href="{{url(env('url').'all-services')}}">Ծառայություների ցուցակ</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a><i class="fa fa-wrench fa-fw"></i> Team <span class="fa arrow"></span></a>
+                    <a><i class="fa fa-sitemap fa-fw"></i> Թիմ <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{{url(env('url').'teams')}}">Add Team Member</a>
+                            <a href="{{url(env('url').'teams')}}">Ավելացնել Նոր Անդամ</a>
                         </li>
                         <li>
-                            <a href="{{url(env('url').'all-team')}}">All Team Members</a>
+                            <a href="{{url(env('url').'all-team')}}">Անդամների Ցուցակ</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a><i class="fa fa-sitemap fa-fw"></i> News <span class="fa arrow"></span></a>
+                    <a><i class="fa fa-sitemap fa-fw"></i> Նորություներ <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{{url(env('url').'news ')}}">Add News</a>
+                            <a href="{{url(env('url').'news ')}}">Ավելացնել</a>
                         </li>
                         <li>
-                            <a href="{{url(env('url').'all-news')}}">All News</a>
+                            <a href="{{url(env('url').'all-news')}}">Նորություների Ցուցակ</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a><i class="fa fa-sitemap fa-fw"></i> Price <span class="fa arrow"></span></a>
+                    <a><i class="fa fa-sitemap fa-fw"></i> Գներ <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{{url(env('url').'prices ')}}">Add Price</a>
+                            <a href="{{url(env('url').'prices ')}}">Ավելացնել</a>
                         </li>
                         <li>
-                            <a href="{{url(env('url').'all-prices')}}">All Prices</a>
+                            <a href="{{url(env('url').'all-prices')}}">Գների Ցուցակ</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="{{url(env('url').'subscribes')}}"><i class="fa fa-sitemap fa-fw"></i> Subscribes  </a>
+                    <a><i class="fa fa-sitemap fa-fw"></i> Նկարներ <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="{{url(env('url').'add-folder ')}}">Ավելացնել Տիրույթ</a>
+                        </li>
+                        <li>
+                            <a href="{{url(env('url').'add-image')}}">Ավելացնել նկարներ</a>
+                        </li>
+                        <li>
+                            <a href="{{url(env('url').'all-folders')}}">Նկարներ</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Contacts  </a>
+                    <a href="{{url(env('url').'contact-user')}}"><i class="fa fa-sitemap fa-fw"></i> Կոնտակտներ  </a>
                 </li>
             </ul>
         </div>

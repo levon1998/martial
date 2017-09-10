@@ -1,7 +1,7 @@
 @extends('admins.layout.app')
 
 @section('title')
-    Add Team Member
+    Ավելացնել Նոր Անդամ
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Add Team Member
+                    Ավելացնել Նոր Անդամ
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -28,29 +28,29 @@
                             <form action="{{url(env('url').'teams')}}" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <input class="form-control" name="name" placeholder="Add name required" value="" required/>
+                                    <input class="form-control" name="name" placeholder="Անուն Ազգանուն" value="" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="description" placeholder="Add description required" value="" required/>
+                                    <input class="form-control" name="description" placeholder="Նկարագրություն" value="" required/>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <label class="input-group-btn">
                                             <span class="btn btn-default" >
-                                                Upload File&hellip; <input type="file" name="image" onchange="loadFile(event)" style="display: none;" multiple>
+                                                Նկար <input type="file" name="image" onchange="loadFile(event)" style="display: none;" multiple>
                                             </span>
                                         </label>
                                         <img id="output" style="width: 234px; height:217px;">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="fb" placeholder="Add fabebook link" value="" />
+                                    <input class="form-control" name="fb" placeholder="fabebook հղում" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="youtube" placeholder="Add youtube link" value="" />
+                                    <input class="form-control" name="youtube" placeholder="youtube հղում" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default">Update</button>
+                                    <button type="submit" class="btn btn-default">Ավելացնել</button>
                                 </div>
                             </form>
                         </div>

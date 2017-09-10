@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12  wow bounce">
                 <div class="section-heading text-center text-uppercase  wow bounceInUp">
-                    <h2>OUR <span>SERVICES</span></h2>
+                    <h2><span>Ծառայություներ</span></h2>
                 </div>
             </div>
         </div>

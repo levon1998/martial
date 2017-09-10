@@ -1,6 +1,6 @@
 <section id="news">
     <div class="section-heading news-heading text-center text-uppercase wow swing">
-        <h2>OUR <span>News</span></h2>
+        <h2><span>Նորություներ</span></h2>
     </div>
     <div class="container">
         <div class="row no-gutter">
@@ -18,7 +18,7 @@
                                     <h4>{{$new->title}}</h4>
 
                                     <p>{{$new->short_description}}</p>
-                                    <i class="fa fa-eye"></i> <span>{{$new->views}}</span>1
+                                    <i class="fa fa-eye"></i> <span></span>{{$new->view}}
                                 </div>
                             </div>
                         </a>

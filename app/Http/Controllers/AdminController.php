@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\models\Contact;
+use App\models\Image_folder;
+use App\models\Images;
 use App\models\News;
 use App\models\Teams;
 use Carbon\Carbon;
+use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use App\models\home_texts as home;
 use App\models\About;
@@ -18,7 +21,11 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admins.index');
+        $news = News::all()->count();
+        $images = Images::all()->count();
+        $price = Prices::all()->count();
+        $services = Services::all()->count();
+        return view('admins.index', compact('news', 'images', 'price', 'services'));
     }
     
     public function homeTexts(Request $request)
@@ -83,9 +90,9 @@ class AdminController extends Controller
             $about->text = $request->input('text');
 
             if ($about->save()) {
-                flash('Success')->success();
+                flash('Տեկստը Հաջողությամբ փոփոխված է')->success();
             } else {
-                flash('Error')->error();
+                flash('Սխալ')->error();
             }
             return redirect()->back();
         } else {
@@ -118,7 +125,7 @@ class AdminController extends Controller
                 $services->image = $full_name;
             }
             $services->save();
-            flash('Service is successfully added')->success();
+            flash('Ծառայությունը հաջողությամբ ավելացված է ')->success();
             return redirect()->back();
         } else {
             return view('admins.pages.services');
@@ -149,7 +156,7 @@ class AdminController extends Controller
                 $data->image = $full_name;
             }
             $data->save();
-            flash('Service is successfully editing')->success();
+            flash('Ծառայությունը հաջողությամբ փոփոխված է')->success();
             return redirect()->back();
         } else {
             return view('admins.pages.editService', compact('data'));
@@ -168,7 +175,7 @@ class AdminController extends Controller
         $data = Services::find($id);
         Prices::where('service_id', $id)->delete();
         $data->delete();
-        flash('Service is successfully deleted')->success();
+        flash('Ծառայությունը հաջողությամբ ջնջված է')->success();
         return redirect()->back();
     }
 
@@ -199,7 +206,7 @@ class AdminController extends Controller
 
             $teams->save();
 
-            flash('Team member is successfully added')->success();
+            flash('Թիմի անդամը հաջողությամբ ավելացված է')->success();
             return redirect()->back();
         } else {
             return view('admins.pages.teams');
@@ -230,7 +237,7 @@ class AdminController extends Controller
                 $data->image = $full_name;
             }
             $data->save();
-            flash('Team member is successfully editing')->success();
+            flash('Թիմի անդամը հաջողությամբ փոփոխված է')->success();
             return redirect()->back();
         } else {
             return view('admins.pages.editTeam', compact('data'));
@@ -249,7 +256,7 @@ class AdminController extends Controller
         $data = Teams::find($id);
         Storage::delete('/public/teams/'.$data->image);
         $data->delete();
-        flash('Tema member is successfully deleted')->success();
+        flash('Թիմի անդամը հաջողությամբ ջնջված է')->success();
         return redirect()->back();
     }
 
@@ -283,7 +290,7 @@ class AdminController extends Controller
 
             $news->save();
 
-            flash('News is successfully added')->success();
+            flash('Նորոթյունը հաջողությամբ ավելացված է')->success();
             return redirect()->back();
         } else {
             return view('admins.pages.news');
@@ -314,7 +321,7 @@ class AdminController extends Controller
                 $data->image = $full_name;
             }
             $data->save();
-            flash('Post is successfully editing')->success();
+            flash('Նորոթյունը հաջողությամբ փոփոխված է')->success();
             return redirect()->back();
         } else {
             return view('admins.pages.editNews', compact('data'));
@@ -333,7 +340,7 @@ class AdminController extends Controller
         $data = News::find($id);
         Storage::delete('/public/news/'.$data->image);
         $data->delete();
-        flash('Post is successfully deleted')->success();
+        flash('Նորոթյունը հաջողությամբ ջնջված է')->success();
         return redirect()->back();
     }
 
@@ -352,7 +359,7 @@ class AdminController extends Controller
             $price->service_id = $request->input('service_id');
             $price->save();
 
-            flash('Price is successfully added')->success();
+            flash('Գինը հաջողությամբ ավելացված է')->success();
             return redirect()->back();
         } else {
             $services = Services::all();
@@ -372,7 +379,7 @@ class AdminController extends Controller
             $data->service_id = $request->input('service_id');
             $data->text = $request->input('text');
             $data->save();
-            flash('Price is successfully editing')->success();
+            flash('Գինը հաջողությամբ փոփոխված է')->success();
             return redirect()->back();
         } else {
             $services = Services::all();
@@ -390,7 +397,7 @@ class AdminController extends Controller
     public function deletePrice($id)
     {
         $data = Prices::find($id)->delete();
-        flash('Price is successfully deleted')->success();
+        flash('Գինը հաջողությամբ ջնջված է')->success();
         return redirect()->back();
     }
     public function subscribes(Request $request)
@@ -402,4 +409,94 @@ class AdminController extends Controller
             return view('admins.pages.subscribes', compact('datas'));
         }
     }
+    public function addFolder(Request $request)
+    {
+        if ($request->isMethod('post')) {
+
+            $this->validate($request, [
+                'name' => 'required|min:3|max:190',
+            ]);
+            $folder = new Image_folder();
+            $folder->name = $request->input('name');
+            $folder->description = $request->input('description');
+            $folder->save();
+            flash('Տիրույթը հաջողությամբ ստեղծված է')->success();
+            return redirect()->back();
+        } else {
+            $folders = Image_folder::orderBy('id', 'desc')->get();
+            return view('admins.pages.addFolder', compact('folders'));
+        }
+    }
+
+    public function allImages($id = null)
+    {
+        if ($id) {
+            $images = Images::where('folder_id', $id)->get();
+            return view('admins.pages.allImages', compact('images', 'id'));
+        }
+    }
+
+    public function deleteImage(Request $request)
+    {
+        $image = Images::find($request->input('id'));
+        Storage::delete('/public/images/'.$image->image);
+        $image->delete();
+        return 'success';
+    }
+    
+    public function allFolders()
+    {
+        $folders = Image_folder::orderBy('id', 'desc')->get();
+        return view('admins.pages.allFolders', compact('folders'));
+    }
+
+    public function saveOrdering(Request $request)
+    {
+        dd($request->all());
+    }
+    
+    public function addImage(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $this->validate($request, [
+                'folder_id' => 'required',
+            ]);
+
+            if (count($request->file('filesToUpload')) > 0) {
+                foreach ($request->file('filesToUpload') as $item) {
+                    $name = microtime();
+                    $ext = $item->getClientOriginalExtension();
+                    $full_name = $name . '.' . $ext;
+                    Storage::putFileAs('/public/images', $item, $full_name);
+
+                    Images::insert(['folder_id' => $request->input('folder_id'), 'image' => $full_name]);
+                }
+            }
+            flash('Նկարները հաջողությամբ ավելացված են')->success();
+            return redirect()->back();
+        } else {
+            $folder = Image_folder::all();
+            return view('admins.pages.addImage', compact('folder'));
+        }
+    }
+    public function ContactUser(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $id = $request->input('id');
+            $status = $request->input('status');
+            if ($status == 'call') {
+                Contact::where('id', $id)->update(['call' => 1]);
+                return 'call';
+            } else {
+                Contact::where('id', $id)->update(['call' => 0]);
+                return 'notcall';
+            }
+
+
+        } else {
+            $data = Contact::orderBy('id', 'desc')->get();
+            return view('admins.pages.contact', compact('data'));
+        }
+    }
+
 }

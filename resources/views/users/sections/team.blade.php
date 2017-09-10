@@ -1,7 +1,7 @@
 <section id="team">
     <div class="container">
         <div class="section-heading text-center text-uppercase wow  wow bounceInRight">
-            <h2>OUR <span>team</span></h2>
+            <h2><span>Թիմ</span></h2>
         </div>
         <div class="row  wow bounceInLeft">
 

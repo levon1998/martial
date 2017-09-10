@@ -9,19 +9,23 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/sm-admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/sm-admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- MetisMenu CSS -->
-    <link href="/sm-admin/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="/sm-admin/vendor/metisMenu/metisMenu.min.css" rel="stylesheet"/>
 
     <!-- Custom CSS -->
-    <link href="/sm-admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/sm-admin/dist/css/sb-admin-2.css" rel="stylesheet"/>
 
     <!-- Morris Charts CSS -->
-    <link href="/sm-admin/vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="/sm-admin/vendor/morrisjs/morris.css" rel="stylesheet"/>
+
+    <link href="/css/adminCustom.css" rel="stylesheet"/>
 
     <!-- Custom Fonts -->
-    <link href="/sm-admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/sm-admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/css/font-awesome-animation.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

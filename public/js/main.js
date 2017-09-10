@@ -2,20 +2,20 @@
     "use strict";
     function initialize() {
         var mapOptions = {
-            zoom: 14,
-            center: new google.maps.LatLng(23.7893837, 90.38596079999999),
+            zoom: 16,
+            center: new google.maps.LatLng(40.2048101,44.5134262),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(23.7893837, 90.38596079999999),
+            position: new google.maps.LatLng(40.2048101,44.5134262),
         });
 
         marker.setMap(map);
         var infowindow = new google.maps.InfoWindow({
-            content: "Hello World!"
+            content: "51 Դպրոց"
         });
 
         infowindow.open(map, marker);

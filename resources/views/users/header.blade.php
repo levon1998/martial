@@ -11,15 +11,14 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active smooth-scroll"><a href="#home">Home</a></li>
-                    <li class="smooth-scroll"><a href="#about">About</a></li>
-                    <li class="smooth-scroll"><a href="#service">Service</a></li>
-                    <li class="smooth-scroll"><a href="#team">Team</a></li>
-                    <li class="smooth-scroll"><a href="#news">News</a></li>
-                    <li class="smooth-scroll"><a href="#price">Price</a></li>
-                    <li class="smooth-scroll"><a href="#contact">Contact</a></li>
-                    <li class="smooth-scroll"><a href="#">Gallery</a></li>
-                    {{--<li class="smooth-scroll"><a href="#">Blog</a></li>--}}
+                    <li class="active smooth-scroll"><a href="#home">Գլխավոր</a></li>
+                    <li class="smooth-scroll"><a href="#about">Մեր մասին</a></li>
+                    <li class="smooth-scroll"><a href="#service">Ծառայություներ</a></li>
+                    <li class="smooth-scroll"><a href="#team">Թիմ</a></li>
+                    <li class="smooth-scroll"><a href="#news">Նորություներ</a></li>
+                    <li class="smooth-scroll"><a href="#price">Գին</a></li>
+                    <li class="smooth-scroll"><a href="#contact">Կոնտակտներ</a></li>
+                    <li class="smooth-scroll"><a href="{{url('/images')}}">Նկարներ</a></li>
                 </ul>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('admins.layout.app')
 
 @section('Home text')
-
+    Սլիդեր
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Add home text here
+                    Ավելացնել սլայդ
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -27,20 +27,20 @@
                             <form action="{{url(env('url').'home-texts')}}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <input class="form-control" name="text" placeholder="Text here" required/>
+                                    <input class="form-control" name="text" placeholder="Տեկստ" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="sub_text" placeholder="Sub text here" required/>
+                                    <input class="form-control" name="sub_text" placeholder="Ենթատեկստ" required/>
                                 </div>
                                 <div class="form-group">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="active" value="1"> Active
+                                            <input type="checkbox" name="active" value="1"> Ակտիվ
                                         </label>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default">Add text</button>
+                                    <button type="submit" class="btn btn-default">Ավելացնել</button>
                                 </div>
                             </form>
                         </div>
@@ -55,7 +55,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        All texts
+                        Բոլոր սլայդերը
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">
@@ -63,10 +63,10 @@
                                 <thead>
                                 <tr>
                                     <th>id</th>
-                                    <th>Text</th>
-                                    <th>Sub text</th>
-                                    <th>Active</th>
-                                    <th>Actions</th>
+                                    <th>Տեկստ</th>
+                                    <th>Ենթատեկստ</th>
+                                    <th>Ակտիվ</th>
+                                    <th>Գործողություներ</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -100,28 +100,28 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                    <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
+                    <h4 class="modal-title custom_align" id="Heading">Փոփոխել</h4>
                 </div>
                 <form action="{{url(env('url').'home-texts-edit')}}" method="post">
                 <div class="modal-body">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <input class="form-control" id="updateText" name="text" placeholder="Text here" required>
+                        <input class="form-control" id="updateText" name="text" placeholder="Տեկստ" required>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="updateSubText" name="sub_text" placeholder="Sub text here" required>
+                        <input class="form-control" id="updateSubText" name="sub_text" placeholder="Ենթատեկստ" required>
                     </div>
                     <div class="form-group">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" id="UpdateActive" name="active" value="1"> Active
+                                <input type="checkbox" id="UpdateActive" name="active" value="1"> Ակտիվ
                             </label>
                         </div>
                     </div>
                     <input type="hidden" id="updateId" name="id" value=""/>
                 </div>
                 <div class="modal-footer ">
-                    <button type="submit" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+                    <button type="submit" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Թարմացնել</button>
                 </div>
                 </form>
             </div>
@@ -136,16 +136,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                    <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+                    <h4 class="modal-title custom_align" id="Heading">Ջնջել այս սլայդը</h4>
                 </div>
                 <div class="modal-body">
 
-                    <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+                    <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Դուք իսկապես ցանկանկանում եք ջնջել այս սլայդը</div>
 
                 </div>
                 <div class="modal-footer ">
-                    <a href="" class="btn btn-success approveDelete"><span class="glyphicon glyphicon-ok-sign"></span> Yes</a>
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                    <a href="" class="btn btn-success approveDelete"><span class="glyphicon glyphicon-ok-sign"></span> Այո</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Ոչ</button>
                 </div>
             </div>
             <!-- /.modal-content -->

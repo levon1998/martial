@@ -18,10 +18,10 @@
         });
     </script>
 </head>
-<body>
+<body style="background-image: url(/img/bg22.jpg)">
     @yield('content')
 </div>
-</body>
+</bodystyle>
 <!-- jQuery -->
 <script src="/sm-admin/vendor/jquery/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>

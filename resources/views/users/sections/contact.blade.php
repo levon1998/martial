@@ -1,6 +1,6 @@
 <section id="contact">
     <div class="section-heading contact-heading text-center text-uppercase">
-        <h2>OUR <span>Contact</span></h2>
+        <h2><span>Կոնտակտներ</span></h2>
     </div>
 
     <div id="map">
@@ -32,7 +32,7 @@
                         <label for="massage">Your Massage</label>
                         <textarea class="form-control" rows="10" name="messege" id="massage"></textarea>
 
-                        <button type="submit" class="btn red-btn"> SEND YOUR MESSAGE</button>
+                        <button type="submit" class="btn red-btn" style="background: rgb(177, 3, 3);"> SEND YOUR MESSAGE</button>
                     </div>
 
                 </form>

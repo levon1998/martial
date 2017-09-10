@@ -1,7 +1,7 @@
 @extends('admins.layout.app')
 
 @section('title')
-    All Team Members
+    Թմի անդամներ
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        All Services
+                        Թմի անդամներ
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">
@@ -18,10 +18,10 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Image</th>
-                                    <th>Actions</th>
+                                    <th>Անուն</th>
+                                    <th>Նկարագրություն</th>
+                                    <th>Նկար</th>
+                                    <th>Գործողություն</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -54,16 +54,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                    <h4 class="modal-title custom_align" id="Heading">Delete this Service</h4>
+                    <h4 class="modal-title custom_align" id="Heading">Ջնջել այս անդամին</h4>
                 </div>
                 <div class="modal-body">
 
-                    <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+                    <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Դուք իսկապես ցանկանում եք ջնջել այս անդամին</div>
 
                 </div>
                 <div class="modal-footer ">
-                    <a href="" class="btn btn-success approveDelete"><span class="glyphicon glyphicon-ok-sign"></span> Yes</a>
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                    <a href="" class="btn btn-success approveDelete"><span class="glyphicon glyphicon-ok-sign"></span> Այո</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Ոչ</button>
                 </div>
             </div>
             <!-- /.modal-content -->

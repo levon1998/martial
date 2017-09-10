@@ -19,7 +19,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Add News
+                    Ավելացնել նորություն
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -27,10 +27,10 @@
                             <form action="{{url(env('url').'news')}}" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <input class="form-control" name="title" placeholder="Add title required" value="" required/>
+                                    <input class="form-control" name="title" placeholder="Անվանում" value="" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="Short description" placeholder="Add short description required" value="" required/>
+                                    <input class="form-control" name="Short description" placeholder="Կարճ նկարագրություն" value="" required/>
                                 </div>
                                 <div class="form-group">
                                     <textarea name="description"></textarea>
@@ -39,7 +39,7 @@
                                     <div class="input-group">
                                         <label class="input-group-btn">
                                             <span class="btn btn-default" >
-                                                Upload File&hellip; <input type="file" name="image" onchange="loadFile(event)" style="display: none;" multiple>
+                                                Ավելացնել նկար <input type="file" name="image" onchange="loadFile(event)" style="display: none;" multiple>
                                             </span>
                                         </label>
                                         <img id="output" style="width: 300px; height: 150px;"/>
@@ -47,7 +47,7 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default">Update</button>
+                                    <button type="submit" class="btn btn-default">Ավելացնել</button>
                                 </div>
                             </form>
                         </div>

@@ -1,7 +1,7 @@
 @extends('admins.layout.app')
 
 @section('title')
-    Edit Service
+    Թարմացնել Ծառայությունը
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Edit Service
+                    Թարմացնել Ծառայությունը
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -28,16 +28,16 @@
                             <form action="{{url(env('url').'edit-service/'.$data->id)}}" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <input class="form-control" name="title" placeholder="Add title required" value="{{$data->title}}" required/>
+                                    <input class="form-control" name="title" placeholder="Անվանում" value="{{$data->title}}" required/>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="text" placeholder="Add description required" value="{{$data->text}}" required/>
+                                    <input class="form-control" name="text" placeholder="Նկարագրություն" value="{{$data->text}}" required/>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <label class="input-group-btn">
                                             <span class="btn btn-default" >
-                                                Upload File&hellip; <input type="file" name="image" onchange="loadFile(event)" style="display: none;" multiple>
+                                                Նկար <input type="file" name="image" onchange="loadFile(event)" style="display: none;" multiple>
                                             </span>
                                         </label>
                                         <img id="output" style="width: 300px; height: 150px;" src="{{($data->image) ? '/storage/services/'.$data->image : '' }}"/>
@@ -49,7 +49,7 @@
                                     <textarea name="page_text">{{$data->page_text}}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default">Update</button>
+                                    <button type="submit" class="btn btn-default">Թարմացնել</button>
                                 </div>
                             </form>
                         </div>

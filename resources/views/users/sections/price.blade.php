@@ -1,7 +1,7 @@
 <section id="price">
     <div class="container">
         <div class="section-heading text-center text-uppercase">
-            <h2>OUR <span>price</span></h2>
+            <h2><span>Գներ</span></h2>
         </div>
         <div class="row">
             @if ($prices)
@@ -15,7 +15,7 @@
                             </div>
                             <div class="price-bottom">
                                 {!! $price->text !!}
-                                <a href="#contact" class="btn text-uppercase smooth-scroll">SUBSCRIBE NOW</a>
+                                <a href="#contact" class="btn text-uppercase smooth-scroll">SUBSCRIBE NOW</a>0
                             </div>
                         </div>
                     </div>

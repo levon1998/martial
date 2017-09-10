@@ -11,14 +11,14 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active smooth-scroll"><a href="#home">Home</a></li>
-                    <li class="smooth-scroll"><a href="{{url('/#about')}}">About</a></li>
-                    <li class="smooth-scroll"><a href="{{url('/#service')}}">Service</a></li>
-                    <li class="smooth-scroll"><a href="{{url('/#team')}}">Team</a></li>
-                    <li class="smooth-scroll"><a href="{{url('/#news')}}">News</a></li>
-                    <li class="smooth-scroll"><a href="{{url('/#price')}}">Price</a></li>
-                    <li class="smooth-scroll"><a href="{{url('/#contact')}}">Contact</a></li>
-                    <li class="smooth-scroll"><a href="{{url('/')}}">Gallery</a></li>
+                    <li class="active smooth-scroll"><a href="#home">Գլխավոր</a></li>
+                    <li class="smooth-scroll"><a href="{{url('/#about')}}">Մեր մասին</a></li>
+                    <li class="smooth-scroll"><a href="{{url('/#service')}}">Ծառայություներ</a></li>
+                    <li class="smooth-scroll"><a href="{{url('/#team')}}">Թիմ</a></li>
+                    <li class="smooth-scroll"><a href="{{url('/#news')}}">Նորություներ</a></li>
+                    <li class="smooth-scroll"><a href="{{url('/#price')}}">Գին</a></li>
+                    <li class="smooth-scroll"><a href="{{url('/#contact')}}">Կոնտակտներ</a></li>
+                    <li class="smooth-scroll"><a href="{{url('/images')}}">Նկարներ</a></li>
                     {{--<li class="smooth-scroll"><a href="#">Blog</a></li>--}}
                 </ul>
             </div>

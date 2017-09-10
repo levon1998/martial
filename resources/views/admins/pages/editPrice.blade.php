@@ -1,7 +1,7 @@
 @extends('admins.layout.app')
 
 @section('title')
-    Edit Price
+    Թարմացնել Գինը
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Add News
+                    Թարմացնել գինը
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -28,12 +28,12 @@
                             <form action="{{url(env('url').'edit-price/'.$data->id)}}" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <input class="form-control" name="price" placeholder="Add price required" value="{{$data->price}}" type="number" required/>
+                                    <input class="form-control" name="price" placeholder="Ավելացնել գին" value="{{$data->price}}" type="number" required/>
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="service_id">
                                         @if ($services)
-                                            <option value="">Select secvice</option>
+                                            <option value="">Ընտրել ծառայությունը</option>
                                             @foreach($services as $service)
                                                 <option value="{{$service->id}}" {{ ($data->service_id == $service->id) ? 'selected' : '' }}>{{$service->title}}</option>
                                             @endforeach
@@ -44,7 +44,7 @@
                                     <textarea name="text">{!! $data->text !!}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default">Update</button>
+                                    <button type="submit" class="btn btn-default">Թարմացնել</button>
                                 </div>
                             </form>
                         </div>

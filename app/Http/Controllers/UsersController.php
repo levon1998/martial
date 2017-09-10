@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\models\Contact;
+use App\models\Image_folder;
+use App\models\Images;
 use App\models\News;
 use App\models\Prices;
 use Illuminate\Http\Request;
@@ -16,7 +18,7 @@ class UsersController extends Controller
     public function index()
     {
         $homeTexts = Home::all();
-        $about = About::first();
+        $about = About::orderBy('id')->first();
         $services = Services::all();
         $teams = Teams::all();
         $news = News::limit(5)->get();
@@ -55,6 +57,29 @@ class UsersController extends Controller
     public function post($id)
     {
         $data = News::find($id);
-        return view('users.pages.post', compact('data'));
+        News::whereId($id)->increment('view');
+        $meta = [
+            'url' => url('news/'.$id),
+            'title' => $data->title,
+            'description' => strip_tags($data->description),
+            'image' => !empty($data->image) ? '/storage/news/'.$data->image : '/img/footer_logo.png'
+        ];
+        return view('users.pages.post', compact('data', 'meta'));
+    }
+
+    public function allImages()
+    {
+        $folders = Image_folder::orderBy('id', 'desc')->get();
+        foreach ($folders as &$folder) {
+            $folder['image'] = Images::select('image')->where('folder_id', $folder->id)->first();
+        }
+        return view('users.pages.folders', compact('folders'));
+    }
+
+    public function allImage($id)
+    {
+        $images = Images::select('image')->where('folder_id', $id)->get();
+
+        return view('users.pages.images', compact('images'));
     }
 }
